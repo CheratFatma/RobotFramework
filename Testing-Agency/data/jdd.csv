@@ -1,0 +1,8 @@
+*** Test Cases ***,${username},${password},${result}
+case1,jean_dupont,Baguette42!,success
+case2,compte_banni,Baguette42!,failure
+case3,client_chaos,Baguette42!,success
+case4,tortue_du_web,Baguette42!,success
+case5,jean_dupont,password_fake,failure
+case6,username_fake,Baguette42!,failure
+case7,username_fake,password_fake,failure

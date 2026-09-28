@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.5 (Python 3.14.7 on win32)" generated="2026-09-24T10:55:54.435740" rpa="false" schemaversion="5">
+<suite id="s1" name="registerPage" source="C:\Users\HP\Desktop\Agropeyi\tests\registerPage.robot">
+<test id="s1-t1" name="Register" line="11">
+<kw name="Init Browser" owner="keyword" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-09-24T10:55:54.828357" level="INFO">Opening browser 'chrome' to base url 'https://agropeyi.fr/index.php'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-09-24T10:55:54.828080" elapsed="5.688802"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2026-09-24T10:56:00.517486" elapsed="0.002086"/>
+</kw>
+<status status="PASS" start="2026-09-24T10:55:54.827076" elapsed="5.692815"/>
+</kw>
+<kw name="Click Cancel" owner="homePage">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${cancel}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-24T10:56:00.521695" elapsed="0.064183"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-24T10:56:00.587228" level="INFO">Clicking element 'css:.btn-close.mobile-launch-close'.</msg>
+<arg>${cancel}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-24T10:56:00.586474" elapsed="0.096363"/>
+</kw>
+<status status="PASS" start="2026-09-24T10:56:00.520894" elapsed="0.162251"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>https://agropeyi.fr/index.php</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2026-09-24T10:56:00.683670" elapsed="0.017083"/>
+</kw>
+<kw name="Click Register" owner="homePage">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${popup}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-24T10:56:00.706985" elapsed="0.035899"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-24T10:56:00.744273" level="INFO">Clicking element 'class=top-bar-btn'.</msg>
+<arg>${click-btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-24T10:56:00.743379" elapsed="0.484789"/>
+</kw>
+<status status="PASS" start="2026-09-24T10:56:00.704436" elapsed="0.523951"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>https://agropeyi.fr/inscription.php</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2026-09-24T10:56:01.228815" elapsed="0.003741"/>
+</kw>
+<kw name="RegiSter" owner="RegisterPage">
+<kw name="Fill Nom" owner="RegisterPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-24T10:56:01.233940" level="INFO">Typing text 'ch' into text field 'id:nom'.</msg>
+<arg>${nom}</arg>
+<arg>${u}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-24T10:56:01.233697" elapsed="0.128763"/>
+</kw>
+<arg>${n}</arg>
+<status status="PASS" start="2026-09-24T10:56:01.233404" elapsed="0.129169"/>
+</kw>
+<kw name="Fill Prenom" owner="RegisterPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-24T10:56:01.363313" level="INFO">Typing text 'la' into text field 'id:prenom'.</msg>
+<arg>${prenom}</arg>
+<arg>${u}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-24T10:56:01.363044" elapsed="0.064372"/>
+</kw>
+<arg>${p}</arg>
+<status status="PASS" start="2026-09-24T10:56:01.362739" elapsed="0.064846"/>
+</kw>
+<kw name="Fill Email" owner="RegisterPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-24T10:56:01.428386" level="INFO">Typing text 'lea@gmail.com' into text field 'id:email'.</msg>
+<arg>${email}</arg>
+<arg>${u}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-24T10:56:01.428137" elapsed="0.065578"/>
+</kw>
+<arg>${e}</arg>
+<status status="PASS" start="2026-09-24T10:56:01.427782" elapsed="0.066066"/>
+</kw>
+<kw name="Fill Telephone" owner="RegisterPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-24T10:56:01.494860" level="INFO">Typing text '0656000000' into text field 'id:telephone'.</msg>
+<arg>${telephone}</arg>
+<arg>${u}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-24T10:56:01.494520" elapsed="0.071652"/>
+</kw>
+<arg>${t}</arg>
+<status status="PASS" start="2026-09-24T10:56:01.494071" elapsed="0.072793"/>
+</kw>
+<kw name="Fill adresse" owner="RegisterPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-24T10:56:01.568084" level="INFO">Typing text '1 rue Paris' into text field 'id:adresse'.</msg>
+<arg>${adresse}</arg>
+<arg>${u}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-24T10:56:01.567686" elapsed="0.062787"/>
+</kw>
+<arg>${a}</arg>
+<status status="PASS" start="2026-09-24T10:56:01.567133" elapsed="0.063512"/>
+</kw>
+<kw name="Fill Ville" owner="RegisterPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-24T10:56:01.631553" level="INFO">Typing text 'Paris' into text field 'id:ville'.</msg>
+<arg>${ville}</arg>
+<arg>${u}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-24T10:56:01.631295" elapsed="0.080832"/>
+</kw>
+<arg>${v}</arg>
+<status status="PASS" start="2026-09-24T10:56:01.630881" elapsed="0.081462"/>
+</kw>
+<kw name="Fill Code Postal" owner="RegisterPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-24T10:56:01.713958" level="INFO">Typing text '75000' into text field 'id:code_postal'.</msg>
+<arg>${code-postal}</arg>
+<arg>${u}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-24T10:56:01.713368" elapsed="0.091408"/>
+</kw>
+<arg>${cp}</arg>
+<status status="PASS" start="2026-09-24T10:56:01.712662" elapsed="0.092703"/>
+</kw>
+<kw name="Select Pays" owner="RegisterPage">
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2026-09-24T10:56:01.807344" level="INFO">Selecting options from selection list 'id:pays' by label France métropolitaine.</msg>
+<arg>${pays}</arg>
+<arg>France métropolitaine</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2026-09-24T10:56:01.806631" elapsed="0.109421"/>
+</kw>
+<status status="PASS" start="2026-09-24T10:56:01.805948" elapsed="0.110297"/>
+</kw>
+<kw name="Fill Mot De Passe" owner="RegisterPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-24T10:56:01.917436" level="INFO">Typing text 'Fatma@wr1.' into text field 'id:mot_de_passe'.</msg>
+<arg>${mdp}</arg>
+<arg>${u}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-24T10:56:01.917062" elapsed="0.110087"/>
+</kw>
+<arg>${mdp1}</arg>
+<status status="PASS" start="2026-09-24T10:56:01.916505" elapsed="0.110811"/>
+</kw>
+<kw name="Fill Confirmer Mot De Passe" owner="RegisterPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-24T10:56:02.028646" level="INFO">Typing text 'Fatma@wr1.' into text field 'id:confirmer_mot_de_passe'.</msg>
+<arg>${confirm-mdp}</arg>
+<arg>${u}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-24T10:56:02.028246" elapsed="0.083193"/>
+</kw>
+<arg>${mdp2}</arg>
+<status status="PASS" start="2026-09-24T10:56:02.027655" elapsed="0.083909"/>
+</kw>
+<kw name="Click Register" owner="RegisterPage">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${register-btn}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-09-24T10:56:02.112119" elapsed="0.281243"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-09-24T10:56:02.395340" level="INFO">Clicking button 'class:btn.btn-fuchsia'.</msg>
+<arg>${register-btn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-24T10:56:02.394135" elapsed="6.241125"/>
+</kw>
+<status status="PASS" start="2026-09-24T10:56:02.111828" elapsed="6.523606"/>
+</kw>
+<arg>ch</arg>
+<arg>la</arg>
+<arg>lea@gmail.com</arg>
+<arg>0656000000</arg>
+<arg>1 rue Paris</arg>
+<arg>Paris</arg>
+<arg>75000</arg>
+<arg>Fatma@wr1.</arg>
+<arg>Fatma@wr1.</arg>
+<status status="PASS" start="2026-09-24T10:56:01.232980" elapsed="7.402521"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2026-09-24T10:56:08.641587" level="INFO">Current location is 'https://agropeyi.fr/inscription.php'.</msg>
+<arg>https://agropeyi.fr/inscription.php</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2026-09-24T10:56:08.635965" elapsed="0.005751"/>
+</kw>
+<kw name="Get Success Message" owner="RegisterPage">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${success-msg}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-24T10:56:08.642696" elapsed="0.066413"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-09-24T10:56:08.730502" level="INFO">${msg} = Succès ! Inscription réussie ! Vous pouvez maintenant vous connecter.</msg>
+<var>${msg}</var>
+<arg>${success-msg}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-24T10:56:08.709367" elapsed="0.021267"/>
+</kw>
+<return>
+<value>${msg}</value>
+<status status="PASS" start="2026-09-24T10:56:08.730807" elapsed="0.000134"/>
+</return>
+<msg time="2026-09-24T10:56:08.731315" level="INFO">${msg} = Succès ! Inscription réussie ! Vous pouvez maintenant vous connecter.</msg>
+<var>${msg}</var>
+<status status="PASS" start="2026-09-24T10:56:08.642237" elapsed="0.089179"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${msg}</arg>
+<arg>Inscription réussie ! Vous pouvez maintenant vous connecter.</arg>
+<doc>Fails if the `container` does not contain the `item` one or more times.</doc>
+<status status="PASS" start="2026-09-24T10:56:08.732091" elapsed="0.000796"/>
+</kw>
+<kw name="Fermer Browser" owner="keyword" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-09-24T10:56:08.734605" elapsed="2.287921"/>
+</kw>
+<status status="PASS" start="2026-09-24T10:56:08.733889" elapsed="2.289517"/>
+</kw>
+<doc>test de register</doc>
+<tag>Valid</tag>
+<status status="PASS" start="2026-09-24T10:55:54.826046" elapsed="16.198269"/>
+</test>
+<doc>fichier de test register</doc>
+<status status="PASS" start="2026-09-24T10:55:54.437700" elapsed="16.590786"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Valid</stat>
+</tag>
+<suite>
+<stat name="registerPage" id="s1" pass="1" fail="0" skip="0">registerPage</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

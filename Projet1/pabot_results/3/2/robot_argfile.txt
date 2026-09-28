@@ -1,0 +1,17 @@
+--suite loginPage
+--variable CALLER_ID:5bf5b3605fac45078e241da19d2611af
+--variable PABOTLIBURI:127.0.0.1:8270
+--variable PABOTEXECUTIONPOOLID:2
+--variable PABOTISLASTEXECUTIONINPOOL:1
+--variable PABOTNUMBEROFPROCESSES:3
+--variable PABOTQUEUEINDEX:2
+--variable PABOTLASTLEVEL:
+--argumentfile ./edge.txt
+--output output.xml
+--log NONE
+--report NONE
+--xunit NONE
+--outputdir .\pabot_results\3\2
+--consolecolors off
+--consolemarkers off
+tests/loginPage.robot

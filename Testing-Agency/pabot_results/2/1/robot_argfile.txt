@@ -1,0 +1,17 @@
+--suite testingAgencyTest
+--variable CALLER_ID:dcf878de6fee49488ad1b3fd2c08b4a3
+--variable PABOTLIBURI:127.0.0.1:8270
+--variable PABOTEXECUTIONPOOLID:0
+--variable PABOTISLASTEXECUTIONINPOOL:0
+--variable PABOTNUMBEROFPROCESSES:3
+--variable PABOTQUEUEINDEX:1
+--variable PABOTLASTLEVEL:testingAgencyTest.PABOT_noend
+--argumentfile ./firefox.txt
+--output output.xml
+--log NONE
+--report NONE
+--xunit NONE
+--outputdir .\pabot_results\2\1
+--consolecolors off
+--consolemarkers off
+tests/testingAgencyTest.robot

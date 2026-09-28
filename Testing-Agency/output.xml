@@ -1,0 +1,669 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.5 (Python 3.14.7 on win32)" generated="2026-09-24T14:55:16.073877" rpa="false" schemaversion="5">
+<suite id="s1" name="Logincsv" source="C:\Users\HP\Desktop\Testing-Agency\tests\logincsv.Robot">
+<test id="s1-t1" name="case1" line="23">
+<kw name="Init Browser" owner="keyword" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-09-24T14:55:16.471641" level="INFO">Opening browser 'chrome' to base url 'https://ssid-testing-agency.github.io/Lab.qa/#/login'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-09-24T14:55:16.471352" elapsed="1.356769"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2026-09-24T14:55:17.829437" elapsed="0.006806"/>
+</kw>
+<status status="PASS" start="2026-09-24T14:55:16.470352" elapsed="1.366434"/>
+</kw>
+<kw name="data driven test">
+<kw name="Connexion" owner="logincsvPage">
+<kw name="Fill Username" owner="logincsvPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-24T14:55:17.845907" level="INFO">Typing text 'jean_dupont' into text field 'id:username'.</msg>
+<arg>${username}</arg>
+<arg>${u}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-24T14:55:17.843631" elapsed="0.295700"/>
+</kw>
+<arg>${u}</arg>
+<status status="PASS" start="2026-09-24T14:55:17.841489" elapsed="0.298176"/>
+</kw>
+<kw name="Fill Password" owner="logincsvPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-24T14:55:18.141424" level="INFO">Typing text 'Baguette42!' into text field 'id:password'.</msg>
+<arg>${password}</arg>
+<arg>${u}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-24T14:55:18.140965" elapsed="0.136813"/>
+</kw>
+<arg>${p}</arg>
+<status status="PASS" start="2026-09-24T14:55:18.140130" elapsed="0.137818"/>
+</kw>
+<kw name="Click login" owner="logincsvPage">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-09-24T14:55:18.278874" level="INFO">Clicking button 'css:[data-testid="login-submit"]'.</msg>
+<arg>${login-btn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-24T14:55:18.278512" elapsed="0.173906"/>
+</kw>
+<status status="PASS" start="2026-09-24T14:55:18.278162" elapsed="0.174629"/>
+</kw>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2026-09-24T14:55:17.840257" elapsed="0.612736"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${result}&quot;==&quot;success&quot;">
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>https://ssid-testing-agency.github.io/Lab.qa/#/catalog</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2026-09-24T14:55:18.454235" elapsed="0.070540"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2026-09-24T14:55:18.617050" level="INFO">Current location is 'https://ssid-testing-agency.github.io/Lab.qa/#/catalog'.</msg>
+<arg>https://ssid-testing-agency.github.io/Lab.qa/#/catalog</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2026-09-24T14:55:18.524988" elapsed="0.092412"/>
+</kw>
+<status status="PASS" start="2026-09-24T14:55:18.453391" elapsed="0.164507"/>
+</branch>
+<branch type="ELSE">
+<kw name="Error" owner="logincsvPage">
+<status status="NOT RUN" start="2026-09-24T14:55:18.618625" elapsed="0.000098"/>
+</kw>
+<status status="NOT RUN" start="2026-09-24T14:55:18.618086" elapsed="0.000777"/>
+</branch>
+<status status="PASS" start="2026-09-24T14:55:18.453247" elapsed="0.165881"/>
+</if>
+<arg>username=jean_dupont</arg>
+<arg>password=Baguette42!</arg>
+<arg>result=success</arg>
+<status status="PASS" start="2026-09-24T14:55:17.838983" elapsed="0.780435"/>
+</kw>
+<kw name="Fermer Browser" owner="keyword" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-09-24T14:55:18.620853" elapsed="2.384658"/>
+</kw>
+<status status="PASS" start="2026-09-24T14:55:18.620384" elapsed="2.385954"/>
+</kw>
+<status status="PASS" start="2026-09-24T14:55:16.468230" elapsed="4.538981"/>
+</test>
+<test id="s1-t2" name="case2" line="23">
+<kw name="Init Browser" owner="keyword" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-09-24T14:55:21.014817" level="INFO">Opening browser 'chrome' to base url 'https://ssid-testing-agency.github.io/Lab.qa/#/login'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-09-24T14:55:21.014194" elapsed="2.010241"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2026-09-24T14:55:23.024893" elapsed="0.002370"/>
+</kw>
+<status status="PASS" start="2026-09-24T14:55:21.012803" elapsed="2.014778"/>
+</kw>
+<kw name="data driven test">
+<kw name="Connexion" owner="logincsvPage">
+<kw name="Fill Username" owner="logincsvPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-24T14:55:23.037479" level="INFO">Typing text 'compte_banni' into text field 'id:username'.</msg>
+<arg>${username}</arg>
+<arg>${u}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-24T14:55:23.033901" elapsed="0.280020"/>
+</kw>
+<arg>${u}</arg>
+<status status="PASS" start="2026-09-24T14:55:23.032160" elapsed="0.281902"/>
+</kw>
+<kw name="Fill Password" owner="logincsvPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-24T14:55:23.325715" level="INFO">Typing text 'Baguette42!' into text field 'id:password'.</msg>
+<arg>${password}</arg>
+<arg>${u}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-24T14:55:23.314797" elapsed="0.167607"/>
+</kw>
+<arg>${p}</arg>
+<status status="PASS" start="2026-09-24T14:55:23.314334" elapsed="0.168331"/>
+</kw>
+<kw name="Click login" owner="logincsvPage">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-09-24T14:55:23.488131" level="INFO">Clicking button 'css:[data-testid="login-submit"]'.</msg>
+<arg>${login-btn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-24T14:55:23.487104" elapsed="0.145555"/>
+</kw>
+<status status="PASS" start="2026-09-24T14:55:23.483405" elapsed="0.149391"/>
+</kw>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2026-09-24T14:55:23.030589" elapsed="0.602294"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${result}&quot;==&quot;success&quot;">
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>https://ssid-testing-agency.github.io/Lab.qa/#/catalog</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="NOT RUN" start="2026-09-24T14:55:23.633469" elapsed="0.000055"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<arg>https://ssid-testing-agency.github.io/Lab.qa/#/catalog</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="NOT RUN" start="2026-09-24T14:55:23.633678" elapsed="0.000046"/>
+</kw>
+<status status="NOT RUN" start="2026-09-24T14:55:23.633039" elapsed="0.000746"/>
+</branch>
+<branch type="ELSE">
+<kw name="Error" owner="logincsvPage">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-09-24T14:55:23.671169" level="INFO">Element 'css:[data-testid="login-error"]' is displayed.</msg>
+<arg>${error}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-24T14:55:23.634470" elapsed="0.036962"/>
+</kw>
+<status status="PASS" start="2026-09-24T14:55:23.634070" elapsed="0.037563"/>
+</kw>
+<status status="PASS" start="2026-09-24T14:55:23.633848" elapsed="0.037907"/>
+</branch>
+<status status="PASS" start="2026-09-24T14:55:23.632984" elapsed="0.038883"/>
+</if>
+<arg>username=compte_banni</arg>
+<arg>password=Baguette42!</arg>
+<arg>result=failure</arg>
+<status status="PASS" start="2026-09-24T14:55:23.028552" elapsed="0.643473"/>
+</kw>
+<kw name="Fermer Browser" owner="keyword" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-09-24T14:55:23.673278" elapsed="2.287699"/>
+</kw>
+<status status="PASS" start="2026-09-24T14:55:23.672881" elapsed="2.288813"/>
+</kw>
+<status status="PASS" start="2026-09-24T14:55:21.010185" elapsed="4.952462"/>
+</test>
+<test id="s1-t3" name="case3" line="23">
+<kw name="Init Browser" owner="keyword" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-09-24T14:55:25.971348" level="INFO">Opening browser 'chrome' to base url 'https://ssid-testing-agency.github.io/Lab.qa/#/login'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-09-24T14:55:25.970436" elapsed="1.668741"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2026-09-24T14:55:27.639719" elapsed="0.004241"/>
+</kw>
+<status status="PASS" start="2026-09-24T14:55:25.968224" elapsed="1.676092"/>
+</kw>
+<kw name="data driven test">
+<kw name="Connexion" owner="logincsvPage">
+<kw name="Fill Username" owner="logincsvPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-24T14:55:27.652304" level="INFO">Typing text 'client_chaos' into text field 'id:username'.</msg>
+<arg>${username}</arg>
+<arg>${u}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-24T14:55:27.651495" elapsed="0.247652"/>
+</kw>
+<arg>${u}</arg>
+<status status="PASS" start="2026-09-24T14:55:27.650500" elapsed="0.249359"/>
+</kw>
+<kw name="Fill Password" owner="logincsvPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-24T14:55:27.904353" level="INFO">Typing text 'Baguette42!' into text field 'id:password'.</msg>
+<arg>${password}</arg>
+<arg>${u}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-24T14:55:27.903353" elapsed="0.157115"/>
+</kw>
+<arg>${p}</arg>
+<status status="PASS" start="2026-09-24T14:55:27.901853" elapsed="0.158853"/>
+</kw>
+<kw name="Click login" owner="logincsvPage">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-09-24T14:55:28.062154" level="INFO">Clicking button 'css:[data-testid="login-submit"]'.</msg>
+<arg>${login-btn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-24T14:55:28.061667" elapsed="0.146278"/>
+</kw>
+<status status="PASS" start="2026-09-24T14:55:28.061071" elapsed="0.147189"/>
+</kw>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2026-09-24T14:55:27.648420" elapsed="0.559932"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${result}&quot;==&quot;success&quot;">
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>https://ssid-testing-agency.github.io/Lab.qa/#/catalog</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2026-09-24T14:55:28.209292" elapsed="0.158619"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2026-09-24T14:55:28.374597" level="INFO">Current location is 'https://ssid-testing-agency.github.io/Lab.qa/#/catalog'.</msg>
+<arg>https://ssid-testing-agency.github.io/Lab.qa/#/catalog</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2026-09-24T14:55:28.368245" elapsed="0.006535"/>
+</kw>
+<status status="PASS" start="2026-09-24T14:55:28.208534" elapsed="0.166457"/>
+</branch>
+<branch type="ELSE">
+<kw name="Error" owner="logincsvPage">
+<status status="NOT RUN" start="2026-09-24T14:55:28.375459" elapsed="0.000094"/>
+</kw>
+<status status="NOT RUN" start="2026-09-24T14:55:28.375101" elapsed="0.000549"/>
+</branch>
+<status status="PASS" start="2026-09-24T14:55:28.208479" elapsed="0.167250"/>
+</if>
+<arg>username=client_chaos</arg>
+<arg>password=Baguette42!</arg>
+<arg>result=success</arg>
+<status status="PASS" start="2026-09-24T14:55:27.645516" elapsed="0.730384"/>
+</kw>
+<kw name="Fermer Browser" owner="keyword" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-09-24T14:55:28.377859" elapsed="2.397691"/>
+</kw>
+<status status="PASS" start="2026-09-24T14:55:28.377279" elapsed="2.398531"/>
+</kw>
+<status status="PASS" start="2026-09-24T14:55:25.965128" elapsed="4.810985"/>
+</test>
+<test id="s1-t4" name="case4" line="23">
+<kw name="Init Browser" owner="keyword" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-09-24T14:55:30.780459" level="INFO">Opening browser 'chrome' to base url 'https://ssid-testing-agency.github.io/Lab.qa/#/login'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-09-24T14:55:30.779928" elapsed="1.845738"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2026-09-24T14:55:32.626017" elapsed="0.001889"/>
+</kw>
+<status status="PASS" start="2026-09-24T14:55:30.778639" elapsed="1.849460"/>
+</kw>
+<kw name="data driven test">
+<kw name="Connexion" owner="logincsvPage">
+<kw name="Fill Username" owner="logincsvPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-24T14:55:32.631985" level="INFO">Typing text 'tortue_du_web' into text field 'id:username'.</msg>
+<arg>${username}</arg>
+<arg>${u}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-24T14:55:32.631129" elapsed="0.282685"/>
+</kw>
+<arg>${u}</arg>
+<status status="PASS" start="2026-09-24T14:55:32.630419" elapsed="0.283602"/>
+</kw>
+<kw name="Fill Password" owner="logincsvPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-24T14:55:32.915625" level="INFO">Typing text 'Baguette42!' into text field 'id:password'.</msg>
+<arg>${password}</arg>
+<arg>${u}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-24T14:55:32.914968" elapsed="0.103560"/>
+</kw>
+<arg>${p}</arg>
+<status status="PASS" start="2026-09-24T14:55:32.914319" elapsed="0.104701"/>
+</kw>
+<kw name="Click login" owner="logincsvPage">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-09-24T14:55:33.020897" level="INFO">Clicking button 'css:[data-testid="login-submit"]'.</msg>
+<arg>${login-btn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-24T14:55:33.020374" elapsed="0.104941"/>
+</kw>
+<status status="PASS" start="2026-09-24T14:55:33.019675" elapsed="0.105844"/>
+</kw>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2026-09-24T14:55:32.629667" elapsed="0.495992"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${result}&quot;==&quot;success&quot;">
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>https://ssid-testing-agency.github.io/Lab.qa/#/catalog</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2026-09-24T14:55:33.126496" elapsed="3.221347"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2026-09-24T14:55:36.363423" level="INFO">Current location is 'https://ssid-testing-agency.github.io/Lab.qa/#/catalog'.</msg>
+<arg>https://ssid-testing-agency.github.io/Lab.qa/#/catalog</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2026-09-24T14:55:36.348364" elapsed="0.015577"/>
+</kw>
+<status status="PASS" start="2026-09-24T14:55:33.125875" elapsed="3.238333"/>
+</branch>
+<branch type="ELSE">
+<kw name="Error" owner="logincsvPage">
+<status status="NOT RUN" start="2026-09-24T14:55:36.364953" elapsed="0.000145"/>
+</kw>
+<status status="NOT RUN" start="2026-09-24T14:55:36.364363" elapsed="0.000864"/>
+</branch>
+<status status="PASS" start="2026-09-24T14:55:33.125815" elapsed="3.239534"/>
+</if>
+<arg>username=tortue_du_web</arg>
+<arg>password=Baguette42!</arg>
+<arg>result=success</arg>
+<status status="PASS" start="2026-09-24T14:55:32.628753" elapsed="3.736766"/>
+</kw>
+<kw name="Fermer Browser" owner="keyword" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-09-24T14:55:36.367309" elapsed="2.429137"/>
+</kw>
+<status status="PASS" start="2026-09-24T14:55:36.366577" elapsed="2.430552"/>
+</kw>
+<status status="PASS" start="2026-09-24T14:55:30.777182" elapsed="8.020721"/>
+</test>
+<test id="s1-t5" name="case5" line="23">
+<kw name="Init Browser" owner="keyword" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-09-24T14:55:38.806912" level="INFO">Opening browser 'chrome' to base url 'https://ssid-testing-agency.github.io/Lab.qa/#/login'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-09-24T14:55:38.806003" elapsed="1.691098"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2026-09-24T14:55:40.497597" elapsed="0.003200"/>
+</kw>
+<status status="PASS" start="2026-09-24T14:55:38.803953" elapsed="1.697864"/>
+</kw>
+<kw name="data driven test">
+<kw name="Connexion" owner="logincsvPage">
+<kw name="Fill Username" owner="logincsvPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-24T14:55:40.511030" level="INFO">Typing text 'jean_dupont' into text field 'id:username'.</msg>
+<arg>${username}</arg>
+<arg>${u}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-24T14:55:40.509787" elapsed="0.240386"/>
+</kw>
+<arg>${u}</arg>
+<status status="PASS" start="2026-09-24T14:55:40.507899" elapsed="0.242652"/>
+</kw>
+<kw name="Fill Password" owner="logincsvPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-24T14:55:40.754338" level="INFO">Typing text 'password_fake' into text field 'id:password'.</msg>
+<arg>${password}</arg>
+<arg>${u}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-24T14:55:40.752866" elapsed="0.114448"/>
+</kw>
+<arg>${p}</arg>
+<status status="PASS" start="2026-09-24T14:55:40.750993" elapsed="0.116633"/>
+</kw>
+<kw name="Click login" owner="logincsvPage">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-09-24T14:55:40.869442" level="INFO">Clicking button 'css:[data-testid="login-submit"]'.</msg>
+<arg>${login-btn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-24T14:55:40.869029" elapsed="0.137038"/>
+</kw>
+<status status="PASS" start="2026-09-24T14:55:40.868219" elapsed="0.138055"/>
+</kw>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2026-09-24T14:55:40.505576" elapsed="0.500839"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${result}&quot;==&quot;success&quot;">
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>https://ssid-testing-agency.github.io/Lab.qa/#/catalog</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="NOT RUN" start="2026-09-24T14:55:41.007118" elapsed="0.000091"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<arg>https://ssid-testing-agency.github.io/Lab.qa/#/catalog</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="NOT RUN" start="2026-09-24T14:55:41.007468" elapsed="0.000063"/>
+</kw>
+<status status="NOT RUN" start="2026-09-24T14:55:41.006610" elapsed="0.001028"/>
+</branch>
+<branch type="ELSE">
+<kw name="Error" owner="logincsvPage">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-09-24T14:55:41.041865" level="INFO">Element 'css:[data-testid="login-error"]' is displayed.</msg>
+<arg>${error}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-24T14:55:41.008637" elapsed="0.033370"/>
+</kw>
+<status status="PASS" start="2026-09-24T14:55:41.008010" elapsed="0.034150"/>
+</kw>
+<status status="PASS" start="2026-09-24T14:55:41.007723" elapsed="0.034528"/>
+</branch>
+<status status="PASS" start="2026-09-24T14:55:41.006557" elapsed="0.035769"/>
+</if>
+<arg>username=jean_dupont</arg>
+<arg>password=password_fake</arg>
+<arg>result=failure</arg>
+<status status="PASS" start="2026-09-24T14:55:40.503470" elapsed="0.538949"/>
+</kw>
+<kw name="Fermer Browser" owner="keyword" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-09-24T14:55:41.043478" elapsed="2.322988"/>
+</kw>
+<status status="PASS" start="2026-09-24T14:55:41.042976" elapsed="2.324116"/>
+</kw>
+<status status="PASS" start="2026-09-24T14:55:38.800276" elapsed="4.567650"/>
+</test>
+<test id="s1-t6" name="case6" line="23">
+<kw name="Init Browser" owner="keyword" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-09-24T14:55:43.393125" level="INFO">Opening browser 'chrome' to base url 'https://ssid-testing-agency.github.io/Lab.qa/#/login'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-09-24T14:55:43.392181" elapsed="1.671474"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2026-09-24T14:55:45.064133" elapsed="0.002056"/>
+</kw>
+<status status="PASS" start="2026-09-24T14:55:43.377283" elapsed="1.689138"/>
+</kw>
+<kw name="data driven test">
+<kw name="Connexion" owner="logincsvPage">
+<kw name="Fill Username" owner="logincsvPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-24T14:55:45.071335" level="INFO">Typing text 'username_fake' into text field 'id:username'.</msg>
+<arg>${username}</arg>
+<arg>${u}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-24T14:55:45.070624" elapsed="0.263870"/>
+</kw>
+<arg>${u}</arg>
+<status status="PASS" start="2026-09-24T14:55:45.069648" elapsed="0.265251"/>
+</kw>
+<kw name="Fill Password" owner="logincsvPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-24T14:55:45.338711" level="INFO">Typing text 'Baguette42!' into text field 'id:password'.</msg>
+<arg>${password}</arg>
+<arg>${u}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-24T14:55:45.336663" elapsed="0.133319"/>
+</kw>
+<arg>${p}</arg>
+<status status="PASS" start="2026-09-24T14:55:45.335488" elapsed="0.134842"/>
+</kw>
+<kw name="Click login" owner="logincsvPage">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-09-24T14:55:45.475779" level="INFO">Clicking button 'css:[data-testid="login-submit"]'.</msg>
+<arg>${login-btn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-24T14:55:45.475042" elapsed="0.120413"/>
+</kw>
+<status status="PASS" start="2026-09-24T14:55:45.471697" elapsed="0.124014"/>
+</kw>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2026-09-24T14:55:45.068237" elapsed="0.527900"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${result}&quot;==&quot;success&quot;">
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>https://ssid-testing-agency.github.io/Lab.qa/#/catalog</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="NOT RUN" start="2026-09-24T14:55:45.597171" elapsed="0.000093"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<arg>https://ssid-testing-agency.github.io/Lab.qa/#/catalog</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="NOT RUN" start="2026-09-24T14:55:45.597531" elapsed="0.000087"/>
+</kw>
+<status status="NOT RUN" start="2026-09-24T14:55:45.596553" elapsed="0.001322"/>
+</branch>
+<branch type="ELSE">
+<kw name="Error" owner="logincsvPage">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-09-24T14:55:45.635368" level="INFO">Element 'css:[data-testid="login-error"]' is displayed.</msg>
+<arg>${error}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-24T14:55:45.600390" elapsed="0.035291"/>
+</kw>
+<status status="PASS" start="2026-09-24T14:55:45.599329" elapsed="0.036644"/>
+</kw>
+<status status="PASS" start="2026-09-24T14:55:45.598101" elapsed="0.037999"/>
+</branch>
+<status status="PASS" start="2026-09-24T14:55:45.596473" elapsed="0.039718"/>
+</if>
+<arg>username=username_fake</arg>
+<arg>password=Baguette42!</arg>
+<arg>result=failure</arg>
+<status status="PASS" start="2026-09-24T14:55:45.067242" elapsed="0.569132"/>
+</kw>
+<kw name="Fermer Browser" owner="keyword" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-09-24T14:55:45.639376" elapsed="2.350767"/>
+</kw>
+<status status="PASS" start="2026-09-24T14:55:45.638305" elapsed="2.352779"/>
+</kw>
+<status status="PASS" start="2026-09-24T14:55:43.372454" elapsed="4.619677"/>
+</test>
+<test id="s1-t7" name="case7" line="23">
+<kw name="Init Browser" owner="keyword" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-09-24T14:55:48.001656" level="INFO">Opening browser 'chrome' to base url 'https://ssid-testing-agency.github.io/Lab.qa/#/login'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-09-24T14:55:48.000693" elapsed="1.845374"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2026-09-24T14:55:49.846551" elapsed="0.007465"/>
+</kw>
+<status status="PASS" start="2026-09-24T14:55:47.998505" elapsed="1.855744"/>
+</kw>
+<kw name="data driven test">
+<kw name="Connexion" owner="logincsvPage">
+<kw name="Fill Username" owner="logincsvPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-24T14:55:49.860798" level="INFO">Typing text 'username_fake' into text field 'id:username'.</msg>
+<arg>${username}</arg>
+<arg>${u}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-24T14:55:49.859483" elapsed="0.237613"/>
+</kw>
+<arg>${u}</arg>
+<status status="PASS" start="2026-09-24T14:55:49.858379" elapsed="0.239404"/>
+</kw>
+<kw name="Fill Password" owner="logincsvPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-24T14:55:50.100740" level="INFO">Typing text 'password_fake' into text field 'id:password'.</msg>
+<arg>${password}</arg>
+<arg>${u}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-24T14:55:50.099873" elapsed="0.120326"/>
+</kw>
+<arg>${p}</arg>
+<status status="PASS" start="2026-09-24T14:55:50.098396" elapsed="0.121998"/>
+</kw>
+<kw name="Click login" owner="logincsvPage">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-09-24T14:55:50.221393" level="INFO">Clicking button 'css:[data-testid="login-submit"]'.</msg>
+<arg>${login-btn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-24T14:55:50.221044" elapsed="0.110239"/>
+</kw>
+<status status="PASS" start="2026-09-24T14:55:50.220638" elapsed="0.110811"/>
+</kw>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2026-09-24T14:55:49.856178" elapsed="0.475420"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${result}&quot;==&quot;success&quot;">
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>https://ssid-testing-agency.github.io/Lab.qa/#/catalog</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="NOT RUN" start="2026-09-24T14:55:50.332330" elapsed="0.000099"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<arg>https://ssid-testing-agency.github.io/Lab.qa/#/catalog</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="NOT RUN" start="2026-09-24T14:55:50.332658" elapsed="0.000163"/>
+</kw>
+<status status="NOT RUN" start="2026-09-24T14:55:50.331869" elapsed="0.001074"/>
+</branch>
+<branch type="ELSE">
+<kw name="Error" owner="logincsvPage">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-09-24T14:55:50.367007" level="INFO">Element 'css:[data-testid="login-error"]' is displayed.</msg>
+<arg>${error}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-24T14:55:50.333897" elapsed="0.033449"/>
+</kw>
+<status status="PASS" start="2026-09-24T14:55:50.333355" elapsed="0.034317"/>
+</kw>
+<status status="PASS" start="2026-09-24T14:55:50.333036" elapsed="0.034841"/>
+</branch>
+<status status="PASS" start="2026-09-24T14:55:50.331789" elapsed="0.036233"/>
+</if>
+<arg>username=username_fake</arg>
+<arg>password=password_fake</arg>
+<arg>result=failure</arg>
+<status status="PASS" start="2026-09-24T14:55:49.855377" elapsed="0.512909"/>
+</kw>
+<kw name="Fermer Browser" owner="keyword" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-09-24T14:55:50.370621" elapsed="2.283236"/>
+</kw>
+<status status="PASS" start="2026-09-24T14:55:50.369996" elapsed="2.284809"/>
+</kw>
+<status status="PASS" start="2026-09-24T14:55:47.995289" elapsed="4.660586"/>
+</test>
+<doc>fichier de jdd pour login</doc>
+<status status="PASS" start="2026-09-24T14:55:16.075940" elapsed="36.583899"/>
+</suite>
+<statistics>
+<total>
+<stat pass="7" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Logincsv" id="s1" pass="7" fail="0" skip="0">Logincsv</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

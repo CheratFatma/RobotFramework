@@ -1,0 +1,29 @@
+[INFO]    Initialized logging in .\pabot_results
+[INFO]    Robot Framework remote server at 127.0.0.1:8270 started.
+[DEBUG]   2026-09-24 14:09:33.469924 [PID:11508] [1] [ID:2] EXECUTING testingAgencyTest {./edge.txt}
+[DEBUG]   2026-09-24 14:09:33.471223 [PID:19376] [2] [ID:0] EXECUTING testingAgencyTest {./chrome.txt}
+[DEBUG]   2026-09-24 14:09:33.472439 [PID:16272] [0] [ID:1] EXECUTING testingAgencyTest {./firefox.txt}
+[DEBUG]   2026-09-24 14:09:38.535664 [PID:19376] [2] [ID:0] still running testingAgencyTest {./chrome.txt} after 5.0s
+[DEBUG]   2026-09-24 14:09:39.073904 [PID:11508] [1] [ID:2] still running testingAgencyTest {./edge.txt} after 5.0s
+[DEBUG]   2026-09-24 14:09:39.074013 [PID:16272] [0] [ID:1] still running testingAgencyTest {./firefox.txt} after 5.0s
+[INFO]    2026-09-24 14:09:46.495181 [PID:19376] [2] [ID:0] PASSED testingAgencyTest {./chrome.txt} in 13.0 seconds
+[INFO]    2026-09-24 14:09:46.697553 [PID:16272] [0] [ID:1] PASSED testingAgencyTest {./firefox.txt} in 13.2 seconds
+[INFO]    2026-09-24 14:09:47.807611 [PID:11508] [1] [ID:2] PASSED testingAgencyTest {./edge.txt} in 14.3 seconds
+[INFO]    3 tests, 3 passed, 0 failed, 0 skipped.
+[INFO]    ===================================================
+[INFO]    Output:  
+[INFO]    C:\Users\HP\Desktop\Testing-Agency\output.xml
+[INFO]    
+[INFO]    Log:     
+[INFO]    C:\Users\HP\Desktop\Testing-Agency\log.html
+[INFO]    
+[INFO]    Report:  
+[INFO]    C:\Users\HP\Desktop\Testing-Agency\report.html
+[INFO]    
+[DEBUG]   Finalizing Pabot execution...
+[DEBUG]   Stopping PabotLib process
+[INFO]    Robot Framework remote server at 127.0.0.1:8270 stopped.
+[DEBUG]   PabotLib process stopped
+[INFO]    Total testing: 40.50 seconds
+[INFO]    Elapsed time:  15.57 seconds
+[DEBUG]   Logs flushed successfully.

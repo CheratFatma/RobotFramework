@@ -1,0 +1,17 @@
+--suite loginPage
+--variable CALLER_ID:3d8c03abca9742d8aea5165e419340d5
+--variable PABOTLIBURI:127.0.0.1:8270
+--variable PABOTEXECUTIONPOOLID:1
+--variable PABOTISLASTEXECUTIONINPOOL:0
+--variable PABOTNUMBEROFPROCESSES:3
+--variable PABOTQUEUEINDEX:1
+--variable PABOTLASTLEVEL:loginPage.PABOT_noend
+--argumentfile ./firefox.txt
+--output output.xml
+--log NONE
+--report NONE
+--xunit NONE
+--outputdir .\pabot_results\2\1
+--consolecolors off
+--consolemarkers off
+tests/loginPage.robot

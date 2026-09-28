@@ -1,0 +1,5 @@
+*** Test Cases ***,${userna},${passw},${result}
+case1,standard_user,secret_sauce,success
+case2,standartd_user_fake,secret_sauce,failure
+case3,standard_user,secret_sauce_fake,failure
+case4,standartd_user_fake,secret_sauce_fake,failure

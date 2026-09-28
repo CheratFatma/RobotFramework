@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.5 (Python 3.14.7 on win32)" generated="2026-09-24T14:09:33.900934" rpa="false" schemaversion="5">
+<suite id="s1" name="testingAgencyTest" source="C:\Users\HP\Desktop\Testing-Agency\tests\testingAgencyTest.robot">
+<test id="s1-t1" name="Register" line="17">
+<kw name="Init Browser" owner="keyword" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-09-24T14:09:34.318972" level="INFO">Opening browser 'chrome' to base url 'https://ssid-testing-agency.github.io/Lab.qa/#/login'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-09-24T14:09:34.318679" elapsed="2.483995"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2026-09-24T14:09:36.803256" elapsed="0.001782"/>
+</kw>
+<status status="PASS" start="2026-09-24T14:09:34.317784" elapsed="2.487507"/>
+</kw>
+<kw name="Connexion" owner="loginPage">
+<kw name="Fill Username" owner="loginPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-24T14:09:36.810129" level="INFO">Typing text 'jean_dupont' into text field 'id:username'.</msg>
+<arg>${username}</arg>
+<arg>jean_dupont</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-24T14:09:36.807839" elapsed="0.325997"/>
+</kw>
+<status status="PASS" start="2026-09-24T14:09:36.806722" elapsed="0.327524"/>
+</kw>
+<kw name="Fill Password" owner="loginPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-24T14:09:37.137201" level="INFO">Typing text 'Baguette42!' into text field 'id:password'.</msg>
+<arg>${password}</arg>
+<arg>Baguette42!</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-24T14:09:37.135332" elapsed="0.126563"/>
+</kw>
+<status status="PASS" start="2026-09-24T14:09:37.134685" elapsed="0.127519"/>
+</kw>
+<kw name="Click login" owner="loginPage">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-09-24T14:09:37.263824" level="INFO">Clicking button 'css:[data-testid="login-submit"]'.</msg>
+<arg>${login-btn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-24T14:09:37.263280" elapsed="0.146642"/>
+</kw>
+<status status="PASS" start="2026-09-24T14:09:37.262605" elapsed="0.147635"/>
+</kw>
+<status status="PASS" start="2026-09-24T14:09:36.805734" elapsed="0.604665"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2026-09-24T14:09:37.568751" level="INFO">Current location is 'https://ssid-testing-agency.github.io/Lab.qa/#/catalog'.</msg>
+<arg>https://ssid-testing-agency.github.io/Lab.qa/#/catalog</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2026-09-24T14:09:37.410687" elapsed="0.158307"/>
+</kw>
+<kw name="Add To WishList" owner="catalogPage">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-24T14:09:37.571868" level="INFO">Clicking element 'css:[data-testid="wishlist-btn-sauce-backpack"]'.</msg>
+<arg>${add-to-wish-list}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-24T14:09:37.571290" elapsed="0.290303"/>
+</kw>
+<status status="PASS" start="2026-09-24T14:09:37.570288" elapsed="0.291525"/>
+</kw>
+<kw name="Get Text Wish List" owner="catalogPage">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-09-24T14:09:37.927416" level="INFO">${number} = 1</msg>
+<var>${number}</var>
+<arg>${wish-list}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-24T14:09:37.863619" elapsed="0.063902"/>
+</kw>
+<return>
+<value>${number}</value>
+<status status="PASS" start="2026-09-24T14:09:37.927695" elapsed="0.000147"/>
+</return>
+<msg time="2026-09-24T14:09:37.928279" level="INFO">${number} = 1</msg>
+<var>${number}</var>
+<status status="PASS" start="2026-09-24T14:09:37.862252" elapsed="0.066098"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${number}</arg>
+<arg>1</arg>
+<doc>Fails if the `container` does not contain the `item` one or more times.</doc>
+<status status="PASS" start="2026-09-24T14:09:37.928716" elapsed="0.005196"/>
+</kw>
+<kw name="Click Wish List" owner="catalogPage">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-24T14:09:37.936413" level="INFO">Clicking element 'css:[data-testid="wishlist-icon"]'.</msg>
+<arg>${wish-list}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-24T14:09:37.935709" elapsed="0.973804"/>
+</kw>
+<status status="PASS" start="2026-09-24T14:09:37.934598" elapsed="0.975276"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2026-09-24T14:09:38.934879" level="INFO">Current location is 'https://ssid-testing-agency.github.io/Lab.qa/#/wishlist'.</msg>
+<arg>https://ssid-testing-agency.github.io/Lab.qa/#/wishlist</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2026-09-24T14:09:38.910251" elapsed="0.024867"/>
+</kw>
+<kw name="Click Add To Cart" owner="wishlistPage">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-09-24T14:09:38.939405" level="INFO">Clicking button 'css:[data-testid="wishlist-add-to-cart-sauce-backpack"]'.</msg>
+<arg>${add-to-cart-btn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-24T14:09:38.938403" elapsed="0.235565"/>
+</kw>
+<status status="PASS" start="2026-09-24T14:09:38.936535" elapsed="0.237673"/>
+</kw>
+<kw name="Get Text Cart" owner="wishlistPage">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-09-24T14:09:39.343529" level="INFO">${number} = 1</msg>
+<var>${number}</var>
+<arg>${cart}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-24T14:09:39.175821" elapsed="0.167805"/>
+</kw>
+<return>
+<value>${number}</value>
+<status status="PASS" start="2026-09-24T14:09:39.343865" elapsed="0.000137"/>
+</return>
+<msg time="2026-09-24T14:09:39.344295" level="INFO">${number} = 1</msg>
+<var>${number}</var>
+<status status="PASS" start="2026-09-24T14:09:39.174898" elapsed="0.169453"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${number}</arg>
+<arg>1</arg>
+<doc>Fails if the `container` does not contain the `item` one or more times.</doc>
+<status status="PASS" start="2026-09-24T14:09:39.344681" elapsed="0.001644"/>
+</kw>
+<kw name="Click Wish List" owner="wishlistPage">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-24T14:09:39.349950" level="INFO">Clicking element 'css:[data-testid="cart-icon"]'.</msg>
+<arg>${cart}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-24T14:09:39.348332" elapsed="0.165796"/>
+</kw>
+<status status="PASS" start="2026-09-24T14:09:39.347145" elapsed="0.167910"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2026-09-24T14:09:39.585908" level="INFO">Current location is 'https://ssid-testing-agency.github.io/Lab.qa/#/cart'.</msg>
+<arg>https://ssid-testing-agency.github.io/Lab.qa/#/cart</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2026-09-24T14:09:39.515591" elapsed="0.070636"/>
+</kw>
+<kw name="Fill code Promo" owner="cartPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-24T14:09:39.588349" level="INFO">Typing text 'fatma' into text field 'id:promo-input'.</msg>
+<arg>${code-promo}</arg>
+<arg>${cp}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-24T14:09:39.587662" elapsed="0.220494"/>
+</kw>
+<arg>fatma</arg>
+<status status="PASS" start="2026-09-24T14:09:39.586833" elapsed="0.222007"/>
+</kw>
+<kw name="Click Commander" owner="cartPage">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-09-24T14:09:39.812181" level="INFO">Clicking button 'css:[data-testid="cart-checkout-button"]'.</msg>
+<arg>${commander}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-24T14:09:39.810631" elapsed="0.227749"/>
+</kw>
+<status status="PASS" start="2026-09-24T14:09:39.809862" elapsed="0.228778"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2026-09-24T14:09:40.067128" level="INFO">Current location is 'https://ssid-testing-agency.github.io/Lab.qa/#/checkout/info'.</msg>
+<arg>https://ssid-testing-agency.github.io/Lab.qa/#/checkout/info</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2026-09-24T14:09:40.039201" elapsed="0.028257"/>
+</kw>
+<kw name="Remplir Formulaire" owner="checkoutPage">
+<kw name="Fill Prenom" owner="checkoutPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-24T14:09:40.071164" level="INFO">Typing text 'la' into text field 'id:first-name'.</msg>
+<arg>${prenom}</arg>
+<arg>${p}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-24T14:09:40.070578" elapsed="0.217839"/>
+</kw>
+<arg>${p}</arg>
+<status status="PASS" start="2026-09-24T14:09:40.069761" elapsed="0.218986"/>
+</kw>
+<kw name="Fill Nom" owner="checkoutPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-24T14:09:40.290790" level="INFO">Typing text 'la' into text field 'id:last-name'.</msg>
+<arg>${nom}</arg>
+<arg>${n}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-24T14:09:40.290040" elapsed="0.263590"/>
+</kw>
+<arg>${n}</arg>
+<status status="PASS" start="2026-09-24T14:09:40.289224" elapsed="0.264736"/>
+</kw>
+<kw name="Fill Email" owner="checkoutPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-24T14:09:40.556115" level="INFO">Typing text 'lonnngm@gmail.com' into text field 'id:email'.</msg>
+<arg>${email}</arg>
+<arg>${e}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-24T14:09:40.555367" elapsed="0.237257"/>
+</kw>
+<arg>${e}</arg>
+<status status="PASS" start="2026-09-24T14:09:40.554415" elapsed="0.238589"/>
+</kw>
+<kw name="Fill Code Postal" owner="checkoutPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-24T14:09:40.795823" level="INFO">Typing text '75000' into text field 'id:postal-code'.</msg>
+<arg>${code-postal}</arg>
+<arg>${cp}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-24T14:09:40.794713" elapsed="0.174879"/>
+</kw>
+<arg>${cp}</arg>
+<status status="PASS" start="2026-09-24T14:09:40.793511" elapsed="0.176481"/>
+</kw>
+<kw name="Click Continuer" owner="checkoutPage">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-09-24T14:09:40.972775" level="INFO">Clicking button 'css:[data-testid="checkout-continue"]'.</msg>
+<arg>${continuer-btn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-24T14:09:40.971864" elapsed="0.210644"/>
+</kw>
+<status status="PASS" start="2026-09-24T14:09:40.970890" elapsed="0.211940"/>
+</kw>
+<arg>la</arg>
+<arg>la</arg>
+<arg>lonnngm@gmail.com</arg>
+<arg>75000</arg>
+<status status="PASS" start="2026-09-24T14:09:40.068711" elapsed="1.114287"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2026-09-24T14:09:41.201481" level="INFO">Current location is 'https://ssid-testing-agency.github.io/Lab.qa/#/checkout/review'.</msg>
+<arg>https://ssid-testing-agency.github.io/Lab.qa/#/checkout/review</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2026-09-24T14:09:41.183485" elapsed="0.018288"/>
+</kw>
+<kw name="Click Confirmer" owner="checkoutPage">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-09-24T14:09:41.204147" level="INFO">Clicking button 'css:[data-testid="checkout-finish"]'.</msg>
+<arg>${confirmer-btn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-24T14:09:41.203485" elapsed="0.195465"/>
+</kw>
+<status status="PASS" start="2026-09-24T14:09:41.202603" elapsed="0.197484"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2026-09-24T14:09:41.413796" level="INFO">Current location is 'https://ssid-testing-agency.github.io/Lab.qa/#/checkout/payment'.</msg>
+<arg>https://ssid-testing-agency.github.io/Lab.qa/#/checkout/payment</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2026-09-24T14:09:41.400501" elapsed="0.014120"/>
+</kw>
+<kw name="Remplir Formulaire Payer" owner="checkoutPage">
+<kw name="Fill Numero Carte" owner="checkoutPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-24T14:09:41.417667" level="INFO">Typing text '1111 1111 1111 1111' into text field 'css:[data-testid="payment-card-number"]'.</msg>
+<arg>${numeroCarte}</arg>
+<arg>${p}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-24T14:09:41.416960" elapsed="0.203243"/>
+</kw>
+<arg>${p}</arg>
+<status status="PASS" start="2026-09-24T14:09:41.416036" elapsed="0.204757"/>
+</kw>
+<kw name="Fill Date Expiration" owner="checkoutPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-24T14:09:41.622607" level="INFO">Typing text '1229' into text field 'id:card-expiry'.</msg>
+<arg>${dateExpiration}</arg>
+<arg>${p}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-24T14:09:41.622043" elapsed="0.232835"/>
+</kw>
+<arg>${n}</arg>
+<status status="PASS" start="2026-09-24T14:09:41.621258" elapsed="0.233849"/>
+</kw>
+<kw name="Fill Cryptogramme" owner="checkoutPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-24T14:09:41.857023" level="INFO">Typing text '123' into text field 'id:card-cvc'.</msg>
+<arg>${cryptogramme}</arg>
+<arg>${p}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-24T14:09:41.856352" elapsed="0.215986"/>
+</kw>
+<arg>${e}</arg>
+<status status="PASS" start="2026-09-24T14:09:41.855575" elapsed="0.216954"/>
+</kw>
+<kw name="Fill Nom Porteur" owner="checkoutPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-24T14:09:42.073885" level="INFO">Typing text 'LL LL' into text field 'id:card-name'.</msg>
+<arg>${nom-porteur}</arg>
+<arg>${p}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-24T14:09:42.073433" elapsed="0.168266"/>
+</kw>
+<arg>${cp}</arg>
+<status status="PASS" start="2026-09-24T14:09:42.072862" elapsed="0.169047"/>
+</kw>
+<kw name="Click Payer" owner="checkoutPage">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-09-24T14:09:42.244971" level="INFO">Clicking button 'css:[data-testid="payment-submit"]'.</msg>
+<arg>${payer-btn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-24T14:09:42.243417" elapsed="0.174071"/>
+</kw>
+<status status="PASS" start="2026-09-24T14:09:42.242320" elapsed="0.175494"/>
+</kw>
+<arg>1111 1111 1111 1111</arg>
+<arg>1229</arg>
+<arg>123</arg>
+<arg>LL LL</arg>
+<status status="PASS" start="2026-09-24T14:09:41.415147" elapsed="1.002834"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>https://ssid-testing-agency.github.io/Lab.qa/#/checkout/confirmation</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2026-09-24T14:09:42.418323" elapsed="1.701684"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2026-09-24T14:09:44.128548" level="INFO">Current location is 'https://ssid-testing-agency.github.io/Lab.qa/#/checkout/confirmation'.</msg>
+<arg>https://ssid-testing-agency.github.io/Lab.qa/#/checkout/confirmation</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2026-09-24T14:09:44.120359" elapsed="0.008477"/>
+</kw>
+<kw name="Get Commande Confirmer Message" owner="checkoutPage">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-09-24T14:09:44.155088" level="INFO">${msg} = Commande confirmée !</msg>
+<var>${msg}</var>
+<arg>${commandeConfirmer-msg}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-24T14:09:44.130185" elapsed="0.024982"/>
+</kw>
+<return>
+<value>${msg}</value>
+<status status="PASS" start="2026-09-24T14:09:44.155302" elapsed="0.000087"/>
+</return>
+<msg time="2026-09-24T14:09:44.155638" level="INFO">${message} = Commande confirmée !</msg>
+<var>${message}</var>
+<status status="PASS" start="2026-09-24T14:09:44.129421" elapsed="0.026276"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${message}</arg>
+<arg>Commande confirmée !</arg>
+<doc>Fails if the `container` does not contain the `item` one or more times.</doc>
+<status status="PASS" start="2026-09-24T14:09:44.156012" elapsed="0.000635"/>
+</kw>
+<kw name="Fermer Browser" owner="keyword" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-09-24T14:09:44.157564" elapsed="2.217681"/>
+</kw>
+<status status="PASS" start="2026-09-24T14:09:44.157083" elapsed="2.218418"/>
+</kw>
+<doc>test de register</doc>
+<tag>e2e</tag>
+<status status="PASS" start="2026-09-24T14:09:34.316947" elapsed="12.058686"/>
+</test>
+<doc>fichier de test testing agency</doc>
+<status status="PASS" start="2026-09-24T14:09:33.903751" elapsed="12.472680"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">e2e</stat>
+</tag>
+<suite>
+<stat name="testingAgencyTest" id="s1" pass="1" fail="0" skip="0">testingAgencyTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

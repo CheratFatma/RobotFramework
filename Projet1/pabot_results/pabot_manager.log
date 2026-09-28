@@ -1,0 +1,32 @@
+[INFO]    Initialized logging in .\pabot_results
+[INFO]    Robot Framework remote server at 127.0.0.1:8270 started.
+[DEBUG]   2026-09-23 14:53:27.779129 [PID:3556] [1] [ID:1] EXECUTING loginPage {./firefox.txt}
+[DEBUG]   2026-09-23 14:53:27.780382 [PID:17184] [2] [ID:2] EXECUTING loginPage {./edge.txt}
+[DEBUG]   2026-09-23 14:53:27.780647 [PID:5904] [0] [ID:0] EXECUTING loginPage {./chrome.txt}
+[DEBUG]   2026-09-23 14:53:33.022593 [PID:5904] [0] [ID:0] still running loginPage {./chrome.txt} after 5.0s
+[DEBUG]   2026-09-23 14:53:33.385567 [PID:17184] [2] [ID:2] still running loginPage {./edge.txt} after 5.0s
+[DEBUG]   2026-09-23 14:53:33.385748 [PID:3556] [1] [ID:1] still running loginPage {./firefox.txt} after 5.0s
+[INFO]    2026-09-23 14:53:42.447697 [PID:17184] [2] [ID:2] PASSED loginPage {./edge.txt} in 14.7 seconds
+[DEBUG]   2026-09-23 14:53:43.267344 [PID:5904] [0] [ID:0] still running loginPage {./chrome.txt} after 15.0s
+[DEBUG]   2026-09-23 14:53:44.102221 [PID:3556] [1] [ID:1] still running loginPage {./firefox.txt} after 15.0s
+[INFO]    2026-09-23 14:53:46.751845 [PID:5904] [0] [ID:0] PASSED loginPage {./chrome.txt} in 19.0 seconds
+[DEBUG]   2026-09-23 14:53:59.333940 [PID:3556] [1] [ID:1] still running loginPage {./firefox.txt} after 30.0s
+[INFO]    2026-09-23 14:54:01.050588 [PID:3556] [1] [ID:1] PASSED loginPage {./firefox.txt} in 33.3 seconds
+[INFO]    6 tests, 6 passed, 0 failed, 0 skipped.
+[INFO]    ===================================================
+[INFO]    Output:  
+[INFO]    C:\Users\HP\Desktop\Robot\output.xml
+[INFO]    
+[INFO]    Log:     
+[INFO]    C:\Users\HP\Desktop\Robot\log.html
+[INFO]    
+[INFO]    Report:  
+[INFO]    C:\Users\HP\Desktop\Robot\report.html
+[INFO]    
+[DEBUG]   Finalizing Pabot execution...
+[DEBUG]   Stopping PabotLib process
+[INFO]    Robot Framework remote server at 127.0.0.1:8270 stopped.
+[DEBUG]   PabotLib process stopped
+[INFO]    Total testing: 1 minute 7.0 seconds
+[INFO]    Elapsed time:  34.54 seconds
+[DEBUG]   Logs flushed successfully.

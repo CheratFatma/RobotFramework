@@ -1,0 +1,11 @@
+==============================================================================
+loginPage :: fichier de test login
+==============================================================================
+loginPageValid :: test de login avec identifiants valides             | PASS |
+------------------------------------------------------------------------------
+LoginPageInvalid :: test de login avec identifiants invalides         | PASS |
+------------------------------------------------------------------------------
+loginPage :: fichier de test login                                    | PASS |
+2 tests, 2 passed, 0 failed
+==============================================================================
+Output:  C:\Users\HP\Desktop\Robot\pabot_results\1\0\output.xml
